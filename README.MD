@@ -1,12 +1,12 @@
 # Api go simple
-It is a just simple RESTful API with Go using:
+It is a just simple REST API with Go using:
 1. **Gin Framework**
 2. **Gorm** 
 
 ## Installation & Run
 ```bash
 # Download this project
-$ go get github.com/dedidot/gorm-gin
+$ go get github.com/go-sql-driver/mysql
 
 # Download Gin Framework
 $ go get github.com/gin-gonic/gin
@@ -15,43 +15,21 @@ $ go get github.com/gin-gonic/gin
 $ go get github.com/jinzhu/gorm
 ```
 
-Setting DB in main.go
-```go
-Config.DB, err = gorm.Open("mysql", "DBUSERNAME:DBPASSWORD@tcp(127.0.0.1:3306)/DBNAME?charset=utf8&parseTime=True&loc=Local")
-```
+DB Setup in Config/Database.go
+Change DBName, Username, Password and host, port as well if running on podunction environment 
 
-## Structure
-```
-├── Models
-│   ├── Book.go // Book models
-|	├── Scheme.go // Book struct and tabel
-├── Config
-│   └── Database.go // Global DB
-├── Controllers
-│   └── Book.go // Book Controller
-├── ApiHelpers
-│   └── Response.go // response function
-├── Routers
-|   └── Routers.go // Routers
-└── main.go
-```
+## APIs
 
-## API
-
-#### /book
-* `GET` : Get all book
-* `POST` : Create a new book
-
-#### /book/:id
-* `GET` : Get a book
-* `PUT` : Update a book
-* `DELETE` : Delete a book
+* `GET` : Get all todos
+* `POST` : Create a todo
+* `GET` : Get a todo
+* `PUT` : Update a todo
+* `DELETE` : Delete a todo
 
 #Post Params
 ```
 {
-	"author": "Op Super John Doe Bilw",
-	"name": "Implementation Golang",
-	"category": "Knowledge"
+	"name": "Groceries shopping",
+	"description": "Biscuits, Tea, Milk, Soap, Powder",
 }
 ```

@@ -2,6 +2,7 @@ package Config
 
 import (
 	"fmt"
+
 	"github.com/jinzhu/gorm"
 )
 
@@ -21,15 +22,13 @@ func BuildDBConfig() *DBConfig {
 		Host:     "0.0.0.0",
 		Port:     3306,
 		User:     "root",
-		DBName:   "writeups",
-		Password: "admin",
+		DBName:   "todos",
+		Password: "mypassword",
 	}
-
 	return &dbConfig
 }
 
 func DbURL(dbConfig *DBConfig) string {
-
 	return fmt.Sprintf(
 		"%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
 		dbConfig.User,
