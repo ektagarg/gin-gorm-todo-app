@@ -16,8 +16,10 @@ $ go get github.com/jinzhu/gorm
 ```
 
 ## DB Setup
-Go to Config/Database.go
-Update DBName, User, Password and Host, Port according to your database configuration
+1. Go to Config/Database.go
+2. Update DBName, User, Password and Host, Port according to your database configuration
+
+## API list
 
 * `GET` : Get all todos
 * `POST` : Create a todo
