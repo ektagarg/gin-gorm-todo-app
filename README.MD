@@ -15,10 +15,9 @@ $ go get github.com/gin-gonic/gin
 $ go get github.com/jinzhu/gorm
 ```
 
-DB Setup in Config/Database.go
-Change DBName, Username, Password and host, port as well if running on podunction environment 
-
-## APIs
+## DB Setup
+Go to Config/Database.go
+Update DBName, User, Password and Host, Port according to your database configuration
 
 * `GET` : Get all todos
 * `POST` : Create a todo
@@ -26,7 +25,7 @@ Change DBName, Username, Password and host, port as well if running on podunctio
 * `PUT` : Update a todo
 * `DELETE` : Delete a todo
 
-#Post Params
+## Post Params
 ```
 {
 	"name": "Groceries shopping",
