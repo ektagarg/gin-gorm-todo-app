@@ -1,8 +1,9 @@
 package Models
 
 import (
-	"../Config"
 	"fmt"
+
+	"github.com/ektagarg/gin-gorm-todo-app/Config"
 	_ "github.com/go-sql-driver/mysql"
 )
 

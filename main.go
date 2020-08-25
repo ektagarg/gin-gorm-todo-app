@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"./Config"
-	"./Models"
-	"./Routes"
+	"github.com/ektagarg/gin-gorm-todo-app/Config"
+	"github.com/ektagarg/gin-gorm-todo-app/Models"
+	"github.com/ektagarg/gin-gorm-todo-app/Routes"
 	"github.com/jinzhu/gorm"
 )
 
